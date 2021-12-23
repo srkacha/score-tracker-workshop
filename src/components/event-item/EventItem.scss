@@ -1,0 +1,113 @@
+$not_started_color: #e9e9e9;
+$live_color: #fae3c1;
+$stopped_color: #fac1c1;
+$finished_color: #c1e0fa;
+
+$font_color: #464646;
+
+$not_started_icon_color: #b6b6b6;
+$live_icon_color: #e6b66f;
+$stopped_icon_color: #f56565;
+$finished_icon_color: #7bc2fd;
+
+.event-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 35px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: $not_started_color;
+  transition: background-color 1s ease;
+
+  &.live {
+    background-color: $live_color;
+  }
+
+  &.stopped {
+    background-color: $stopped_color;
+  }
+
+  &.finished {
+    background-color: $finished_color;
+  }
+
+  .competitors {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    .competitor {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 16px;
+      color: $font_color;
+      font-weight: 300;
+    }
+  }
+
+  .period {
+    width: 16%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    color: $font_color;
+    font-weight: 300;
+  }
+
+  .status {
+    width: 16%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    svg.status-icon {
+      height: 24px;
+
+      path {
+        fill: $not_started_icon_color !important;
+      }
+
+      &.live {
+        path {
+          fill: $live_icon_color !important;
+        }
+      }
+
+      &.stopped {
+        path {
+          fill: $stopped_icon_color !important;
+        }
+      }
+
+      &.finished {
+        path {
+          fill: $finished_icon_color !important;
+        }
+      }
+    }
+  }
+
+  .scores {
+    width: 16%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    .single-score {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 20px;
+      font-size: 16px;
+      color: $font_color;
+      font-weight: 300;
+    }
+  }
+}

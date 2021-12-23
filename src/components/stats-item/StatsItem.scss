@@ -1,0 +1,14 @@
+.stats-item {
+  display: flex;
+  flex-direction: row;
+  width: 33%;
+  justify-content: center;
+
+  .label {
+    margin-right: 10px;
+  }
+
+  .value {
+    color: #3b6485;
+  }
+}
